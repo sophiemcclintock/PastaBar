@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Please put a title in</title>
+		<title>Planning Website</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="Description" lang="en" content="ADD SITE DESCRIPTION">
 		<meta name="author" content="ADD AUTHOR INFORMATION">
@@ -18,18 +18,28 @@
 
 		<!-- Override CSS file - add your own CSS rules -->
 		<link rel="stylesheet" href="assets/css/styles.css">
+        <style>
+            .img-margin{
+                max-width: 75%;
+            }
+        </style>
 
 	</head>
 	<body>
 		<div class="container">
 			<div class="header">
-				<h1 class="header-heading">Sitename</h1>
+				<h1 class="header-heading">Python Planning Website</h1>
 			</div>
 			<div class="nav-bar">
 				<ul class="nav">
-					<li><a href="#">Nav item 1</a></li>
-					<li><a href="#">Nav item 2</a></li>
-					<li><a href="#">Nav item 3</a></li>
+					<li><a href="#One">Version 1</a></li>
+					<li><a href="#Two">Version 2</a></li>
+					<li><a href="#Three">Version 3</a></li>
+                    <li><a href="#Four">Version 4</a></li>
+                    <li><a href="#Five">Version 5</a></li>
+                    <li><a href="#Six">Version 6</a></li>
+                    <li><a href="#Seven">Version 7</a></li>
+                    <li><a href="#Eight">Version 8</a></li>
 				</ul>
 			</div>
 			<div class="content">
@@ -39,29 +49,331 @@
 			
                     
 					<h1>Brief</h1>
+                <p> This python program is a pasta bar ordering system. It is designed so that users will be able to easily place an online order. There will be an option to add to their order, delete from their order as well as editing it along the way. We are using the menu from the local Wellington pasta resturant, 1154.<p>
 					<hr>
-
+<h5>Starting Project Backlog</h5>
+<img class="img-responsive" src="assets/img/Starting_Project_Backlog.png" alt="Starting Project Backlog">
+<hr>
     <!-- Heading levels -->
-    <h1>Version One</h1>
+    <h1 id="One">Version One</h1>
+<p> This version is ensures that the main program is working correctly and we can print the pasta menu as well as quit the program. This is a really important step as it is setting up all the basics so that when it starts to get more complicated, we can always refer back to this. </p>
 <p>Plan with data types and restrictions on data input</p>
-<p>Picture of spreadsheet as single table, first version</p>
- <p>Reflection (+ anything about relevant implications)</p>
-<hr>
-<h1>Version Two</h1>
+<img class="img-responsive img-margin" src="assets/img/Sprint_1_Plan.jpg" alt="Sprint 1 Plan">
+<br>
+<p>Picture of Sprint Board</p>
+<img class="img-responsive" src="assets/img/Sprint_1_Board.png" alt="Sprint 1 Board">
+<br>
+<p>Test for Sprint One</p>
+<img class="img-responsive" src="assets/img/Sprint_1_Test.png" alt="Sprint 1 Test">
+<br>
+<h3>Reflection (+ anything about relevant implications)</h3>
+<p> This is just the basic form of the program, using this the user is able to print the order list and quit the program. For the next sprint, I will make a function the means the user can add to their order. This function is not validated yet so that is something I will also have to work on in the upcoming sprints. </p>
+    <h1 id = "Two">Version Two</h1>
+<p>This version incorporates my sprint 2 and 3. Sprint 2 allows the user to add a certain amount of pasta to your menu, while Sprint 3 allows the user to review what they have already added to their order. Obviously it is important to be able to add to your menu but it is also really important to be able to review what you have added to your order so you decide if it is correct or you want to change it</p>
 <p>Plan with data types and restrictions on data input</p>
-<p>Link to data base</p>
-<p>Sample queries</p>
- <p>Reflection (+ anything about relevant implications)</p>
+<img class="img-responsive img-margin" src="assets/img/Sprint_2_Plan.jpg" alt="Sprint 2 Plan">
+<br>
+<p>Picture of Sprint Board</p>
+<img class="img-responsive" src="assets/img/Sprint_2_Board.png" alt="Sprint 2 Board">
+<br>
+<p>Tests</p>
+<img class="img-responsive" src="assets/img/Sprint_2_Good_Test.png" alt="Sprint 2 Good Test">
+<br>
+<img class="img-responsive" src="assets/img/Sprint_2_Bad_Test.png" alt="Sprint 2 Bad Test">
+<br>
+<p> As we can see in this test, it did not work because I entered a number that was not an index number of one of the pizzas and so the program crashed. To improve this, I would need add validation so the system recognised when the input is not valid</p>
+<h3>Reflection (+ anything about relevant implications)</h3>
+<p>One thing I did learn is that you can't rely too much on your written plan, you will have to change things but you just have to be flexible. The functions I have added in this version mean the user can add a certain number of pastas to their order and review their order. Orginally, for this version I intended to just make the adding function but I ended up including the review function because it was an easy way to check if the correct quantity of the correct pasta had been added to my order. For the next sprint I am going to add the function to delete items from the users order. Again, nothing in this program has been validated yet so this is the biggest problem I have at the moment. </p>
 <hr>
-<h1>Version Three</h1>
-<p>Plan with data types and restrictions on data input</p>
-<p>Link to data base</p>
-<p> Query examples with tables as examples of how the data would be presented</p>
- <p>Reflection (+ anything about relevant implications)</p>
+<h1 id="Three">Version Three</h1>
+<p>This version allows the user to delete something they have already added to their order. This is important because it means if they incorrectly typed in a number, it is easy to change.</p>
+<h5>Plan with data types and restrictions on data input</h5>
+<img class="img-responsive img-margin" src="assets/img/Sprint_4_Plan.JPG" alt="Sprint 4 Plan">
+<br>
+<h5>Picture of Sprint Board</h5>
+<img class="img-responsive" src="assets/img/Sprint_4_Board.png" alt="Sprint 4 Board">             
+<br>
+<h4>Tests</h4>
+<p>For this sprint, I used a testing page because there were a couple of different ways I could do it. Below you can see one of my test fails. This failed because the user could not see their order and the subsequent index numbers connected to the order, so they entered an index number that was out of range and not applicable. This was the reason I decided to add a review order function to this version. You can also see the method I decided to use and my final test.</p>
+<img class="img-responsive" src="assets/img/Sprint_4_Bad_Testing_Page.png" alt="Sprint 4 Bad Testing Page">             
+<br>
+<img class="img-responsive" src="assets/img/Sprint_4_Good_Testing_Page.png" alt="Sprint 4 Good Testing Page">    
+<br>
+<p>Here is the final test in my full program</p>
+<img class="img-responsive" src="assets/img/Sprint_4_Good_Test.png" alt="Sprint 4 Good Test">             
+<br>
+<h3>Reflection (+ anything about relevant implications)</h3>
+<p>During my work on this version I learnt that it is a good idea to use a testing page because it means you can trial some different options and chose the one the works. You can see evidence from this in my planning above. After completing this version the user is now able to delete the specific type of pasta that they have already added to their order. This makes it easy if they change their mind during placing the order, it is easy the remove the whole pasta and replace it with something different. Unfortunately, something that this version does not do is that it does not allow you to change the quantity of the pasta, either add to it or subtract from it, so that will be my plan for the next version. Again, a long term issue that needs solving is the validation. Currently, if I enter the incorrect index number it crashes and this, obviously, is not ideal for a program. I think my plan at the moment is to finish adding the major functions, then work on validating them all.  </p>
 <hr>
+<h1 id="Four">Version Four</h1>
+<p>This version allows the user to edit the amount of the items they have already added to their order. For example, if someone has added 5 of a paticular pasta but they made a mistake and wanted to add 6 instead, they can easily change it.</p>  
+<h5>Plan</h5>
+<img class="img-responsive" src="assets/img/Sprint_5_Plan.JPG" alt="Sprint 5 Plan">   
+<br>
+<h5>Picture of Sprint Board</h5>
+<img class="img-responsive" src="assets/img/Sprint_5_Board.png" alt="Sprint 5 Board"> 
+<br>
+<h5>The final code for the function</h5>
+<pre style="font-size: 1.5em;">
+<code class="Python">
+def edit_order(o):
+    print_order_with_indexes(o)
+    print("-" * 80)
+    user_choice = get_integer("What pasta would you like to edit? (Please enter the index number) -> ")
+    quantity = get_integer("What would you like to change the quantity of {} to? The current quantity is {} -> ".format(o[user_choice][0], o[user_choice][2]))
+    o[user_choice][2] = quantity
+    confirmation = "You now have {} {}".format(o[user_choice][2], o[user_choice][0])
+    print(confirmation)
+</code>
+</pre>
+<br>
+<h5>Tests for the final code</h5>
+<img class="img-responsive" src="assets/img/Sprint_5_Test.png" alt="Sprint 5 Test">  
+<br>
+<h5>Reflection</h5>
+<p>This version was probably one of the easier ones for me because it was just changing the quantity in the order list, I did not have deal with two lists like some of the others. This is a really important steo because it means if users make just a small mistake and type in the wrong number when they are entering in the quantity, it is really easy to change. I also did it in a way which means I don't have to have two seperate functions for adding to the quantity and subtracting from the quantity, it is just the same function. This makes the program a lot less complicated in general. Next version I am going to start validating all my previous functions, the adding and deleting ones as well as the reviewing one and the editing one. This will make it a lot easier to use and mean that if the user does make a small mistake, the program will not crash and it will be easy to recover. One thing that might become a problem to users in the future is that the menu could potenially be quite hard to understand. For example, the two options, 'deleting from order' and 'editing order' might be difficult for users to distingush between. This is hopefully just something I can fix in the next version by a using a different name that will more clearly explain what the different functions do.  </p>
+                
+<hr>
+<h1 id="Five">Version Five</h1>
+<p>This version focuses on validation because for all my functions so far this has been the biggest problem, that it is not validated and this is an issue that needs fixing. I know I might need to do some more validating in the later stages but I wanted to do some know so there was not much of a backlog.</p>
+<h5>Plan</h5>
+<img class="img-responsive img-margin" src="assets/img/Sprint_6/Sprint_6_Plan.jpg" alt="Sprint 6 Plan"> 
+<br>
+<h5>Picture of Sprint Board</h5>
+<img class="img-responsive" src="assets/img/Sprint_6/Sprint_6_Board.png" alt="Sprint 6 Board"> 
+<hr>
+<h3>Testing Page</h3>
+<p>The first thing I did on my testing page was trial some different formats for the integer validation. It can be useful to try out some different kind of methods to allow you to work out whichever one works best with your code. </p>
+<h4>Integer Validation Trials</h4>                
+<table>
+<tr><th></th><th>Code</th><th>Test</th></tr>
+<tr><td><b>First Trial</b></td><td>
+<pre style="font-size: 1em;">
+<code class="Python">
+def get_integer(m, _min=0, _max=10):
+    getting = True
+    while getting is True:
+        my_integer = int(input(m))
+        if my_integer < _min or my_integer >= _max:
+            output = "Your value is not in the required range"
+            print(output)
+        else:
+            return my_integer  
+            getting = False
+</code>
+</pre></td><td><img class="img-responsive" src="assets/img/Sprint_6/First_Trial_Numbers_Test.png" alt="Sprint 6 First Trial Integers Test"> </td></tr>
+<tr><td><b>Second Trial</b></td><td>
+    <pre style="font-size: 1em;">
+<code class="Python">
+def get_integer(m, _min=0, _max=10):
+    # assume it is wrong
+    have_correct_value = False
+    while have_correct_value is False:
+        try:
+            my_integer = int(input(m))
+        except ValueError:
+            print("You have not entered an integer")
+            # immediate jumpback to top of loop
+            continue
+        # we have an integer
+        if my_integer < _min:
+            output = "Your value is too small, please re-enter"
+            print(output)
+            continue
+        elif my_integer >= _max:
+            output = "Your value is too big, please re-enter"
+            print(output)
+            continue
+        # have the correct value so end loop
+        return my_integer
+</code>
+</pre></td><td><img class="img-responsive" src="assets/img/Sprint_6/Second_Trial_Numbers_Test.png" alt="Sprint 6 Second Trial Integers Test"></td></tr>
+</table>
+<br>
+<h5>Reflection on Trials</h5>
+<p>The first trial you can see here working well if you were just working with intergers but if you entered a letter or a string, it would crash. For obvious reasons, this would not be benefical to the real code. So for the second trial, I added a Value Error which meant if a letter or string was submitted, it would automatically send a message back saying "You have not entered an integer". This worked a lot better as it meant that the program did not crash. Based on these results, I am planning to use my second trial in the code.</p>
+<hr> 
+<p>The second validation I worked on the validation for the strings. Although it has also been used once in the code so far, I think it is going to be used in the next few sprints so it is still important to get it working. This was relatively similar to the integer validation, so I completed it in one trial</p>
+<br>
+<h4>String Validation Trials</h4>
+<table>
+<tr><th></th><th>Code</th><th>Test</th></tr>
+<tr><td><b>First Trial</b></td><td>
+<pre style="font-size: 1em;">
+<code class="Python">
+def get_string(m, _min=2, _max=15):
+    getting_answer = True
+    while getting_answer is True:
+        my_string = input(m)
+        if len(my_string)<_min:
+            output = "You string is too short. Please re-enter"
+            print(output)
+        if len(my_string)>_max:
+            output = "You string is too long. Please re-enter"
+            print(output)
+        else:
+            return my_string
+</code>
+</pre></td><td><img class="img-responsive" src="assets/img/Sprint_6/First_Trial_Strings_Test.png" alt="Sprint 6 First Trial Strings Test"> </td></tr>
+</table>
+<br>
+<h5>Reflection</h5>
+<p>This version went really well, completing the validation was actually a lot easier than I imagined. I was able to do a validation for the integers, as well as the string, and insert them both into the code, and they work well. Again, I have learnt that having a couple of different options for my trials makes it easier to choose one that works really well and is the most developed. For the next version, I am planning to incorperate a confirm order, so the user can enter their details (name, address and phone number). Again, the biggest problem I need to solve is making sure the users understand what everything means, especially the options on the menu at the start of the code. This is important because if they do not understand, this could really hinder their understanding of the rest of the program. </p>
+                
+<h5>Midway Project Backlog</h5>
+<img class="img-responsive" src="assets/img/Midway_Project_Backlog.png" alt="Midway Project Backlog">  
+<hr>                
+<h1 id="Six">Version 6</h1>
+<p>This version is adding customer details. We can get their name and phone number and find out if they want delivery or pickup. If they want delivery the program can also get their address. This is important because if the customer wants to place an order the program needs to know their details so they can identify them.</p> 
+<h5>Plan</h5>
+<img class="img-responsive" src="assets/img/Sprint_7_Plan.jpg" alt="Sprint 7 Plan"> 
+<br>
+<h5>Board</h5>
+<img class="img-responsive" src="assets/img/Sprint_7_Board.png" alt="Sprint 7 Board"> 
+<br>
+<h5>Final Code</h5>
+<pre style="font-size: 1.5em;">
+<code class="Python">
+def customer_details(c):
+    name = get_string("Can you please enter your name -> ", 0, 50)
+    phone_number = get_string("Can you please enter your phone number -> ", 0, 15)
+    print("-"*80)
+    options = ["D : Delivery", "P : Pickup"]
+    for x in options:
+        print(x)
+    user_choice = get_string("Please enter your choice -> ", 0, 1)
+    if user_choice == "D":
+        delivery = True
+        while delivery is True:
+            number = get_string("You have selected Delivery. Can you please enter your address. Number -> ", 0, 5)
+            street = get_string("Street -> ", 0, 50)
+            suburb = get_string("Suburb -> ", 0, 50)
+            city = get_string("City -> ", 0, 50)
+            postcode = get_string("Postcode -> ", 0, 4)
+            address = "{} {}, {} {} {}".format(number, street, suburb, city, postcode)
+            output = get_string("Your address is {}. Is this correct? (Please enter Y or N) -> ".format(address), 0, 1)
+            if output == "Y":
+                delivery = False
+            elif output == "N":
+                delivery = True
+        output = "Address: {}, Phone Number: {}, Name: {}".format(address, phone_number, name)
+        c.extend([name, phone_number, address])
+        print(output)
+    elif user_choice == "P":
+        print("You have selected Pickup")
+        output = "Phone Number: {}, Name: {}".format(phone_number, name)
+        c.extend([name, phone_number])
+        print(output)
+</code>
+</pre>
+<h5>Tests for the final code</h5>
+<img class="img-responsive" src="assets/img/Sprint_7_Test.png" alt="Sprint 7 Test">  
+<br>
+<h5>Reflection</h5>
+<p>What have I learnt, where I am at, where am I going, long term issues, problems I need to solve. This sprint was one of the easiest because all I had to do was ask the user for information then add it to the customer details list. The next thing I am going to do is working on finalising the order, and asking the user if they want to add another order. There are a couple of problems that I need to fix but I have put them on the project backlog because I am on a bit of a time crunch and they are not as important at the moment. The main problem is that if the user adds the same pasta to their order, it comes up twice instead of adding on to the original quantity of pasta, but I will fix this a bit further down the track. </p>
+<hr>
+<h1 id="Seven">Version Seven</h1>
+<p>This sprint is working on finalising the order. This means, finding out if the order is correct, then asking if they want to place another order and if not, finishing the program. I might have to make a couple of functions throughout this order because it will be easier than trying to combine everything into one order.</p> 
+<h5>Plan</h5>
+<img class="img-responsive" src="assets/img/Sprint_8_Plan.jpg" alt="Sprint 8 Plan"> 
+<br>
+<h5>Board</h5>
+<img class="img-responsive" src="assets/img/Sprint_8_Board.png" alt="Sprint 8 Board"> 
+<br>
+<h5>Tests</h5>
+<p>This program took me a bit of time to figure out because there were quite a lot of little components throughout that made it difficult. The first difficulty I found was that if the user had forgotten to enter their customer details, the program crashed. I fixed this by deleting the option to enter their customer details in the menu and instead adding it in the function, once the user had said their order was correct. The image below is of the crash due to this problem.</p>
+<img class="img-responsive" src="assets/img/Sprint_8_Fail.png" alt="Sprint 8 Fail"> 
+<br>
+<h5>Final Code</h5>
+<pre style="font-size: 1.5em;">
+<code class="Python">
+def finalising_order(o, c):
+    review_order(o)
+    confirm = get_string("Is this order correct? Please enter Yes (Y) or No (No) -> ", 0, 1)
+    correcting_order = True
+    while correcting_order is True:
+        if confirm == "Y":
+            customer_details(c)
+            print("Your order has been finalised")
+            o.clear()
+            c.clear()
+            order_or_quit = order_again()
+            return order_or_quit
+            correcting_order = False
+        elif confirm == "N":
+            correcting_order = False
+            return True
+        else:
+            print("Unrecognised entry")
+    
+def order_again():
+    output = get_string("Would you like to place another order? Please enter Yes (Y) or No (No) -> ", 0, 1)
+    if output == "Y":
+        return True
+    elif output == "N":
+        print("Thank you for ordering your meal. The program will terminate")
+        return False
+    else:
+        print("Unrecognised entry")
+</code>
+</pre>
+<h5>Final Test</h5>
+<img class="img-responsive" src="assets/img/Sprint_8_Good_Test.png" alt="Sprint 8 Good Test">   
+<br>
+<h5>Reflection</h5>
+<p>This sprint was working on finalising the order, asking if what they order was final and if they wanted to place another order. This sprint took a bit longer because there were a few different sections to work out individually before they all worked together. One of the problems I had to sort was what was returned and where the program went from there. For example, if the user said that they wanted to place another order, I had to return True so that it returned to the program but if they said they did not want to place another order, I had to return False so it quit the program. I have learnt that while it makes it a bit more complicated when creating the code, it is a lot better to do a couple of different functions instead of trying to combine it into one function. I think that the next version is going to be fixing all the little problems, like the issue with the double item if you order it twice and adding some little extra details, like a $3 charge for delivery and potenially adding extras to their order. I will also need to do some commenting and DocTyping. </p>
+<hr>
+<h1 id="Eight">Version Eight</h1> 
+<p>This version is not focuses on something specific, it is more generic, fixing problems and making the program as user friendly as possible.</p>
+<br>
+<h5>Board</h5>
+<img class="img-responsive" src="assets/img/Sprint_9_Board.png" alt="Sprint 9 Board"> 
+<br>
+<h5>Problems</h5>
+<p>The first problem I need to fix was an issue that affected several functions. If the user has not added anything to their order they are still able to click on delete order, edit order and finalising order and become stuck in a loop. This is very unhelpful because while they are not likely to click on one of these options when they have not added anything to their order, if they make a mistake they could easily get stuck. The test below demonstrates this using the delete function </p>
+<img class="img-responsive" src="assets/img/Sprint_9_Bad_Test.png" alt="Sprint 9 Problem"> 
+<h5>Solution</h5>
+<p>The solution was just that I had to add an if statement at the start of the function that meant if there was nothing in the order, it returned an error message and went back to the main menu. This worked for all three of the functions, edit, delete and finalising. Below you can see the code that I used to fix this problem and well as the result in the program using the delete function again.</p>
+<div class="col-container">
+<div class="col">
+<img class="img-responsive" src="assets/img/Sprint_9_Good_Test.png" alt="Sprint 9 Solution"> 
+</div>
+<div class="col">
+<pre style="font-size: 1.2em;">
+<code class="Python">
+    if len(o) == 0:
+        print("You have not added anything to your order")
+        print("-" * 80)
+    else:
+        # continue with rest of code
+</code>
+</pre>
+</div>
+</div>
+<hr>
+<h5>Video of Code</h5>
+<video width="600" height="370" controls>
+<source src="assets/img/Code_video.mov"> 
+Your browser does not support this video type
+</video>
+<hr>
+<h5>Extra</h5>
+<p>A couple of other things that I decided to do in this version just to increase the level of the code was to add some more pasta options for the user. I had been using three because it was easier to deal with but now that I am pretty much finished, I have increased the number to eight. Another change I made was that I did a final confirmation after the user has entered their details in case they have made a mistake and want to add something else to their order. This is important because it means they can back out right up until the last second. One other little thing that I changed was that I added descriptions for the pasta so that if the user was struggling on what to order, they were able to view the toppings to help their decision. The last thing I did was that I added a three dollar charge when the user selecting delivery. This was part of the requirements for the code. </p>
+<div class="col-container">
+<div class="col">
+<h5>Project Errors</h5>
+<p>Py Charm has a function called Problems that allows you to fix any formatting errors in my code. To the right you can see a screenshot of the errors I had before I fixed them. Some of issues were that one of the functions I had created was not being used so I could delete it, the variable name was too ambiguous and paticular lines in the code were too long.</p>
+<p>Below you can see the same screen when I had fixed majority of the problems. The only problems that I could not fix where the apparent misspellings because the spelling is actually correct, the program just does not recognise it becuase it is in a different language. </p>
+<img class="img-responsive" src="assets/img/Project_Errors_After.png" alt="The Project Errors after">
+</div>
+<div class="col">
+<img class="img-responsive" src="assets/img/Project_Errors_Before.png" alt="The Project Errors before"> 
+</div>
+</div>
+<h5>Reflection</h5>   
+<p>What have I learnt, where I am at, where am I going, long term issues, problems I need to solve. I did not end up doing that much on this version, I just fixed a couple of problems, touched up the code a bit and did some commenting and DocTyping. Unfortunately due to the time resriction, I did not manage to complete a few things on my project backlog for this version but it was extra stuff anyway so it did not really matter. If I had had more time on this project, I would have completed some of the extra things on my project backlog, like adding extras to the pasta's. </p>
 <h1> Relevant Implications Summary</h1>
- <hr>
- <hr>
+<hr>
 
 
 
@@ -73,12 +385,22 @@
 
 <pre style="font-size: 1.5em;">
 <code class="Python">
-# interesting comment
-def review_fruit(l):
-    for x in l:
-        output = "{:&le; 10} -- {: &gt;4}".format(x[0], x[1])
-        print(output)
-    return None
+def get_string(m, _min=2, _max=15):
+    getting_answer = True
+    while getting_answer is True:
+        my_string = input(m)
+        if len(my_string)<_min:
+            output = "You string is too short. Please re-enter"
+            print(output)
+        if len(my_string)>_max:
+            output = "You string is too long. Please re-enter"
+            print(output)
+        else:
+            return my_string
+            getting_answer = False
+
+
+
 </code>
 </pre>
 

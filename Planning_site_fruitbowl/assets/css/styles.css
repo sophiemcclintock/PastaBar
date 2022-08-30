@@ -89,7 +89,7 @@ Layout styles
 .header
 {
 	color: #fff;
-	background: #999;
+	background: darkblue;
 	padding: 1em 1.25em;
 }
 
@@ -131,9 +131,9 @@ Nav
 {
 	display: block;
 	padding: .7em 1.25em;
-	color: #fff;
+	color: white;
 	text-decoration: none;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid grey;
 }
 
 .nav a:link { color: white; }
@@ -148,7 +148,7 @@ Nav
 .nav a:hover
 {
 	color: white;
-	background-color: green;
+	background-color: lightblue;
 }
 
 .nav a:active
