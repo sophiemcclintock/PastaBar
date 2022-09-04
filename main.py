@@ -13,10 +13,10 @@ def get_string(m, _min=2, _max=15):
         my_string = input(m)
         # checking length of input
         if len(my_string) < _min:
-            output = "You string is too short. Please re-enter"
+            output = "Your string is too short. Please re-enter"
             print(output)
         elif len(my_string) > _max:
-            output = "You string is too long. Please re-enter"
+            output = "Your string is too long. Please re-enter"
             print(output)
         else:
             return my_string
@@ -104,6 +104,7 @@ def review_order(o, t):
         print(output)
     print("Total price: ${}".format(t))
     print("-" * 80)
+    # returning the total, so it can be carried through to another function
     return t
 
 
@@ -201,6 +202,7 @@ def customer_details(c, total):
         if user_choice == "D":
             delivery = True
             while delivery is True:
+                # adding the extra 3 dollars onto the total cost
                 total += 3
                 number = get_string("You have selected Delivery. Can you please enter your address. Number -> ", 0, 5)
                 street = get_string("Street -> ", 0, 50)
@@ -208,15 +210,19 @@ def customer_details(c, total):
                 city = get_string("City -> ", 0, 50)
                 postcode = get_string("Postcode -> ", 0, 4)
                 address = "{} {}, {} {} {}".format(number, street, suburb, city, postcode)
+                # checking that they have entered there address correctly
                 message = "Your address is {}. Is this correct? (Please enter Y or N) -> ".format(address)
-                confirmation = get_string(message, 0, 1)
+                confirmation = get_string(message, 0, 1).upper()
                 if confirmation == "Y":
                     output = "Address: {} \nPhone Number: {} \nName: {}".format(address, phone_number, name)
                     # adding information to customer details list
                     c.extend([name, phone_number, address])
                     print(output)
+                    # exiting the loop
+                    delivery = False
                     choice = False
                 elif confirmation == "N":
+                    # returning to the top of the loop
                     delivery = True
                     total -= 3
                 else:
@@ -249,40 +255,39 @@ def finalising_order(o, c, t):
         print("-" * 80)
         return True
     else:
-        # calling the review order function
+        # calling the review order function and collecting the returned total cost
         total = review_order(o, t)
         # starting loop
         correcting_order = True
         while correcting_order is True:
-            order = get_string("Is this order correct? Please enter Yes (Y) or No (No) -> ", 0, 1).upper()
+            order = get_string("Is this order correct? Please enter Yes (Y) or No (N) -> ", 0, 1).upper()
             if order == "Y":
                 # calling the customer details function
                 customer_details(c, total)
                 # final confirmation
-                # is all good?
                 confirmation = True
                 while confirmation is True:
                     message = "Do you want to finalise this order? Please enter Yes (Y) or No (N) -> "
-                    final_confirmation = get_string(message, 0, 1)
+                    final_confirmation = get_string(message, 0, 1).upper()
                     if final_confirmation == "Y":
+                        # clearing the lists so if they would like to place another order, they can start again
                         o.clear()
                         c.clear()
                         # calling the order again function and returning the boolean (T or F) it already returned
                         order_or_quit = order_again()
                         return order_or_quit
                     elif final_confirmation == "N":
+                        # if not good, clear the customer details and return to main menu
                         c.clear()
                         return True
                     else:
-                        print("Unrecognised entry")
+                        print("Unrecognised entry. Please enter Y or N")
                         confirmation = True
-                # if not good, clear the customer details and return to main menu
-                # clearing the lists so if they would like to place another order, they can start again
             elif order == "N":
                 # returning True so that the main program does not stop and goes back to the options menu
                 return True
             else:
-                print("Unrecognised entry")
+                print("Unrecognised entry. Please enter Y or N")
                 # going back to the top of the loop
                 correcting_order = True
 
@@ -301,11 +306,11 @@ def order_again():
             # returning True so that the program returns to the main menu
             return True
         elif output == "N":
-            print("Thank you for ordering your meal. The program will terminate.")
+            print("Thank you for ordering your meal, the program is now terminating.")
             # return False so that the run loop in the main menu stops and the program terminates
             return False
         else:
-            print("Unrecognised entry")
+            print("Unrecognised entry. Please enter Y or N")
 
 
 def main():
@@ -332,8 +337,9 @@ def main():
     order_list = []
     details_list = []
     total = 0
-    options = ["P : Print Menu", "Q : Quit", "R : Review Order", "A : Add To Your Order", "D : Delete from Order",
-               "E : Edit order", "F : Finalising Order"]
+    options = ["P : Print Menu", "R : Review Your Order", "A : Add Pasta To Your Order",
+               "D : Delete Pasta from Your Order", "E : Edit Your Order", "F : Finalise Your Order",
+               "Q : Quit Program"]
     run = True
     while run is True:
         # print the options list
@@ -358,12 +364,25 @@ def main():
             # calling the edit order function
             edit_order(order_list)
         elif user_choice == "F":
-            # calling the finalising order function
+            # calling the finalising order function and making whatever is returned equal to run so the program either
+            # returns to the top of the loop or quits
             run = finalising_order(order_list, details_list, total)
         elif user_choice == "Q":
             # stopping the loop and therefore ending the program
-            run = False
-            print("Thank you for looking through my program")
+            end = False
+            while end is False:
+                message = "You are quitting the program, is this correct? (Please enter Y or N) -> "
+                output = get_string(message, 0, 1).upper()
+                if output == "Y":
+                    end = True
+                    print("This program will terminate.")
+                    run = False
+                elif output == "N":
+                    end = True
+                    run = True
+                else:
+                    print("Unrecognised entry. Please enter Y or N")
+
         else:
             print("Unrecognised entry, please re-enter")
 

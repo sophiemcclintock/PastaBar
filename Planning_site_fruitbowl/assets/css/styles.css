@@ -148,13 +148,14 @@ Nav
 .nav a:hover
 {
 	color: white;
-	background-color: lightblue;
+	background-color: darkblue;
+    padding: .8em
 }
 
 .nav a:active
 {
 	color: white;
-	background-color: red;
+	background-color: cornflowerblue;
 }
 /* -----------------------
 column styles
